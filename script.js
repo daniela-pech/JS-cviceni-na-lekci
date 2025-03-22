@@ -42,3 +42,16 @@ const wageInCzk = wageInEur * kurz;
 document.body.innerHTML += 'Hodinová sazba v CZK je:';
 document.body.innerHTML += '<br>';
 document.body.innerHTML += wageInCzk + ' CZK';
+document.body.innerHTML += '<br>';
+document.body.innerHTML += ' <h1> Mzda v korunách: ' + wageInCzk + ' Kč </h1>';
+document.body.innerHTML += '<br>';
+
+//ULTRAMARATON
+document.body.innerHTML +=
+  'Spočítejte, v kolik hodin skončí ultramaratonský závod.';
+document.body.innerHTML += '<br>';
+const start = 15;
+const delka = 12;
+const konec = start + delka;
+document.body.innerHTML += 'Běžec doběhne závod ve ' + (konec % 24) + ' ráno';
+document.body.innerHTML += '<br>';
