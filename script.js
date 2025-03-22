@@ -27,3 +27,18 @@ document.body.innerHTML +=
   'Vytvořte řetězec obsahující vaši e-mailovou adresu.';
 document.body.innerHTML += '<br>';
 document.body.innerHTML += 'Daniela' + '.' + 'Pech' + '@mujmail.com';
+document.body.innerHTML += '<br>';
+
+//NÁHODNÁ ČÍSLA
+document.body.innerHTML += Math.random();
+document.body.innerHTML += '<br>';
+document.body.innerHTML += Math.round(Math.random());
+document.body.innerHTML += '<br>';
+
+//PŘEVOD MĚNY
+const wageInEur = 20;
+const kurz = 24.55;
+const wageInCzk = wageInEur * kurz;
+document.body.innerHTML += 'Hodinová sazba v CZK je:';
+document.body.innerHTML += '<br>';
+document.body.innerHTML += wageInCzk + ' CZK';
