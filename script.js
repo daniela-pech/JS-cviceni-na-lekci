@@ -72,10 +72,71 @@ const yourName = prompt('Jaké je Vaše jméno a příjmení?');
 const age = Number(prompt('Kolik Vám je let?'));
 document.body.innerHTML += '<h2>' + yourName + ', věk: ' + age + '</h2>';
 */
-//Výplata jako stránka - Spočítejte, kolik si jako programátor vyděláte.
 
+/*
+//Výplata jako stránka - Spočítejte, kolik si jako programátor vyděláte.
 const hodSazba = Number(prompt('Zadejte vaši hodinovou sazbu v Kč:'));
 const hodDenne = Number(prompt('Kolik hodin denně pracuješ?'));
 const dnuCelkem = Number(prompt('Kolik dní v měsíci celkem pracuješ?'));
 document.body.innerHTML +=
-  '<h2> Vaš měsíční hrubá mzda je: ' + hodSazba * hodDenne * dnuCelkem + ' Kč';
+  '<h2> Vaš měsíční hrubá mzda je: ' +
+  hodSazba * hodDenne * dnuCelkem +
+  ' Kč </h2>';
+*/
+
+//CVIČENÍ REALITKA
+const apartment = {
+  type: 'rent',
+  disposition: '3+1',
+  area: {
+    floorage: 100,
+    balcony: 2,
+    units: 'sqm',
+  },
+  city: 'Prague',
+  district: 'Old Town',
+  price: {
+    rent: 28000,
+    fees: {
+      water: 1000,
+      energy: 2500,
+      services: 560,
+    },
+    currency: 'czk',
+  },
+  ownership: 'personal',
+  condition: 'renovated',
+  status: 'free',
+  floor: 3,
+};
+document.body.innerHTML += 'Dispozice bytu je: ' + apartment.disposition;
+document.body.innerHTML += '<p></p>';
+document.body.innerHTML +=
+  'Nájem činí: ' +
+  (apartment.price.rent -
+    apartment.price.fees.water -
+    apartment.price.fees.energy -
+    apartment.price.fees.services) +
+  ' Kč';
+document.body.innerHTML += '<p></p>';
+document.body.innerHTML +=
+  'Rozloha bytu je: ' +
+  apartment.area.floorage +
+  ' ' +
+  apartment.area.units +
+  ' a výměra balkónu je: ' +
+  apartment.area.balcony +
+  ' ' +
+  apartment.area.units;
+document.body.innerHTML += '<p></p>';
+
+const town = apartment.city;
+document.body.innerHTML += 'Byt je ve městě: ' + town;
+document.body.innerHTML += '<p></p>';
+
+const part = apartment.district;
+document.body.innerHTML += 'Byt je v městké části: ' + part;
+document.body.innerHTML += '<p></p>';
+
+apartment.status = 'taken';
+document.body.innerHTML += 'Status bytu je: ' + apartment.status;
