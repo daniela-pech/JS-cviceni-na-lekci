@@ -84,6 +84,7 @@ document.body.innerHTML +=
   ' Kč </h2>';
 */
 
+/*
 //CVIČENÍ REALITKA
 const apartment = {
   type: 'rent',
@@ -140,3 +141,51 @@ document.body.innerHTML += '<p></p>';
 
 apartment.status = 'taken';
 document.body.innerHTML += 'Status bytu je: ' + apartment.status;
+*/
+
+/*
+//KNIHOVNA
+const kniha = {
+  vlastovka: {
+    nazev: 'Vlaštovka v bublině',
+    autor: 'Markéta Lukášková',
+    pocetStran: 222,
+    jazyk: 'čestina',
+  },
+  druha: {
+    nazev: 'Druhý název knihy',
+    autor: 'Já',
+    pocetStran: 20,
+    jazky: 'angličtina',
+  },
+};
+document.body.innerHTML +=
+  'Název knihy je: ' +
+  kniha.vlastovka.nazev +
+  ' a její autorka je: ' +
+  kniha.vlastovka.autor;
+
+document.body.innerHTML += '<p></p>';
+
+document.body.innerHTML +=
+  'Název knihy je: ' +
+  kniha.druha.nazev +
+  ' a její autorka je: ' +
+  kniha.druha.autor
+  ;
+*/
+
+//OČKOVÁNÍ OBJEKTY
+const person = {
+  name: prompt('Zadejte své jméno a příjmení:'),
+  age: Number(prompt('Zadejte svůj věk:')),
+  language: window.navigator.language,
+};
+document.body.innerHTML +=
+  '<h3> Vaše jméno je: ' +
+  person.name +
+  ' a je vám: ' +
+  person.age +
+  ' let a komunikujete v jazyce: ' +
+  person.language +
+  '. </h3>';
